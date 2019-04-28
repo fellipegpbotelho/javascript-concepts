@@ -45,3 +45,15 @@ var counter = (function() {
     reset: _reset
   };
 })();
+
+const jQuery1 = function() {
+  console.log("jQuery 1.0.0");
+};
+
+const jQuery2 = function() {
+  console.log("jQuery 2.0.0");
+};
+
+(function($) {
+  $();
+})(jQuery2);
