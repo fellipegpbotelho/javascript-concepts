@@ -5,6 +5,10 @@
   Você cria um closure adicionando uma função dentro de outra função.
 */
 
+/*
+  A função filho possui uma referência ao escopo da função pai, e a essa referência nós damos o nome de closure.
+*/
+
 function showName(firstName, lastName) {
   var nameIntro = "Your name is ";
 
@@ -15,9 +19,9 @@ function showName(firstName, lastName) {
   return makeFullName;
 }
 
-//var makeFullName = showName("Fellipe", "Botelho");
+var makeFullName = showName("Fellipe", "Botelho");
 
-//console.log(makeFullName());
+console.log(makeFullName());
 
 function celebrityID() {
   var celebrityID = 999;
@@ -35,4 +39,5 @@ var mjID = celebrityID();
 
 console.log(mjID.getID());
 mjID.setID(555);
+
 console.log(mjID.getID());
